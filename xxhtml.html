@@ -1,0 +1,207 @@
+## -*- coding: utf-8 -*-
+<%inherit file="/debug_style/index.html"/>
+
+
+<%def name="real_main()">
+<div class="box">
+    <div class="title">
+        ${self.breadcrumbs()}
+    </div>
+
+    ##main
+    <div class='sidebar-col-wrapper'>
+    ${self.sidebar()}
+
+    <div class="main-content">
+
+
+
+      <h2>Basic elements</h2>
+
+      <p>This page shows all relevant basic HTML elements in their current
+         style.</p>
+
+      <h2>Headings</h2>
+
+      <div class="bs-example">
+        <h1>Headline H1</h1>
+        <h2>Headline H2</h2>
+        <h3>Headline H3</h3>
+        <h4>Headline H4</h4>
+        <h5>Headline H5</h5>
+        <h6>Headline H6</h6>
+      </div>
+
+
+
+
+      <h2>Body copy</h2>
+
+      <p>
+        Momentum's global default
+        <code>font-size</code>
+        is <strong>13px</strong>, with a
+        <code>line-height</code>
+        of <strong>2</strong>. This is applied to the
+        <code>&lt;body&gt;</code>
+        and all paragraphs. In addition,
+        <code>&lt;p&gt;</code>
+        (paragraphs) receive a bottom margin of <strong>20px</strong>
+        by default.
+      </p>
+
+      <div class="bs-example">
+        <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+        <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
+        <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+      </div>
+
+
+
+      <h2>Default blockquote</h2>
+
+      <div class="bs-example">
+        <blockquote>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+        </blockquote>
+      </div>
+
+      
+
+      <h2>Tooltip</h2>
+      <p>Any element with a class <code>tooltip</code> and a <code>title</code> attribute will replaced with the custom tooltip via Javascript. <br />Tooltips should be used with care as touch devices won't activate them.</p>
+      <div class="bs-example">
+        <p class="tooltip" title="I am a tooltip in a `p`">Hover me, please!</p>
+      </div>
+    
+
+    
+      <!-- Lists -->
+      <h2>Lists</h2>
+    
+      <h3>Unordered</h3>
+      <p>A list of items in which the order does <em>not</em> explicitly matter.</p>
+      <div class="bs-example">
+        <ul>
+          <li>Lorem ipsum dolor sit amet</li>
+          <li>Consectetur adipiscing elit</li>
+          <li>Integer molestie lorem at massa</li>
+          <li>Facilisis in pretium nisl aliquet</li>
+          <li>Nulla volutpat aliquam velit
+            <ul>
+              <li>Phasellus iaculis neque</li>
+              <li>Purus sodales ultricies</li>
+              <li>Vestibulum laoreet porttitor sem</li>
+              <li>Ac tristique libero volutpat at</li>
+            </ul>
+          </li>
+          <li>Faucibus porta lacus fringilla vel</li>
+          <li>Aenean sit amet erat nunc</li>
+          <li>Eget porttitor lorem</li>
+        </ul>
+      </div>
+
+
+
+      <h3>Ordered</h3>
+      <p>A list of items in which the order <em>does</em> explicitly matter.</p>
+      <div class="bs-example">
+        <ol>
+          <li>Lorem ipsum dolor sit amet</li>
+          <li>Consectetur adipiscing elit</li>
+          <li>Integer molestie lorem at massa</li>
+          <li>Facilisis in pretium nisl aliquet</li>
+          <li>Nulla volutpat aliquam velit</li>
+          <li>Faucibus porta lacus fringilla vel</li>
+          <li>Aenean sit amet erat nunc</li>
+          <li>Eget porttitor lorem</li>
+        </ol>
+      </div>
+
+
+
+      <h3>Unstyled</h3>
+      <p>Remove the default <code>list-style</code> and left margin on list items (immediate children only). <strong>This only applies to immediate children list items</strong>, meaning you will need to add the class for any nested lists as well.</p>
+      <div class="bs-example">
+        <ul class="list-unstyled">
+          <li>Lorem ipsum dolor sit amet</li>
+          <li>Consectetur adipiscing elit</li>
+          <li>Integer molestie lorem at massa</li>
+          <li>Facilisis in pretium nisl aliquet</li>
+          <li>Nulla volutpat aliquam velit
+            <ul>
+              <li>Phasellus iaculis neque</li>
+              <li>Purus sodales ultricies</li>
+              <li>Vestibulum laoreet porttitor sem</li>
+              <li>Ac tristique libero volutpat at</li>
+            </ul>
+          </li>
+          <li>Faucibus porta lacus fringilla vel</li>
+          <li>Aenean sit amet erat nunc</li>
+          <li>Eget porttitor lorem</li>
+        </ul>
+      </div>
+
+
+
+      <h3>Inline</h3>
+      <p>Place all list items on a single line with <code>display: inline-block;</code> and some light padding.</p>
+      <div class="bs-example">
+        <ul class="list-inline">
+          <li>Lorem ipsum</li>
+          <li>Phasellus iaculis</li>
+          <li>Nulla volutpat</li>
+        </ul>
+      </div>
+
+
+
+
+      <h3>Description</h3>
+      <p>A list of terms with their associated descriptions.</p>
+      <div class="bs-example">
+        <dl>
+          <dt>Description lists</dt>
+          <dd>A description list is perfect for defining terms.</dd>
+          <dt>Euismod</dt>
+          <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+          <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+          <dt>Malesuada porta</dt>
+          <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+        </dl>
+      </div>
+
+
+
+
+      <h4>Horizontal description</h4>
+      <p>Make terms and descriptions in <code>&lt;dl&gt;</code> line up side-by-side. Starts off stacked like default <code>&lt;dl&gt;</code>s, but when the navbar expands, so do these.</p>
+      <div class="bs-example">
+        <dl class="dl-horizontal">
+          <dt>Description lists</dt>
+          <dd>A description list is perfect for defining terms.</dd>
+          <dt>Euismod</dt>
+          <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+          <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+          <dt>Malesuada porta</dt>
+          <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+          <dt>Felis euismod semper eget lacinia</dt>
+          <dd>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
+        </dl>
+      </div>
+
+      <div class="bs-callout bs-callout-info">
+        <h4>Auto-truncating</h4>
+        <p>Horizontal description lists will truncate terms that are too long to fit in the left column with <code>text-overflow</code>. In narrower viewports, they will change to the default stacked layout.</p>
+      </div>
+    </div>
+
+       
+
+
+
+
+    </div>
+  </div>
+</div>
+</%def>
